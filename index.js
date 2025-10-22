@@ -2,7 +2,7 @@ import fs from 'fs';
 import * as path from "node:path";
 import {Jimp, JimpMime} from 'jimp';
 const token = process.env.GITHUB_TOKEN;
-const username = "reyzeal";
+const username = process.env.GITHUB_USERNAME;
 
 
 const JSON_REPOS = "results/json/repos"
@@ -117,9 +117,15 @@ const toSvg = async (title, data) => {
     const totals = {};
     const used = {};
     let totalSize = 0;
+    let totalRepos = 0;
+    let totalOrganization = 0;
     for (const repo of repos) {
+        if(repo.owner.type === "Organization") {
+            totalOrganization++;
+        }
         if(repo.owner.type === "Organization" || repo.owner.login === username){
             console.log(repo.full_name)
+            totalRepos++;
             usernames[repo.full_name.split("/")[0]] = (usernames[repo.full_name.split("/")[0]] ?? 0) + 1;
             let langs  = await getLanguages(repo.full_name);
 
@@ -153,4 +159,6 @@ const toSvg = async (title, data) => {
     fs.writeFileSync(JSON_RANK_SIZE_FILE, JSON.stringify(totals));
     fs.writeFileSync(JSON_RANK_PRESENCE_FILE, JSON.stringify(used, null, 2));
     fs.writeFileSync(JSON_REPO_FILE, JSON.stringify(repos));
+    console.log("total repo:", totalRepos);
+    console.log("total org repo:", totalOrganization);
 })();
