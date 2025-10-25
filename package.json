@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "dotenv -e .env -- bun index.js"
+    "start": "dotenv -e .env -- bun src/index.ts"
   },
   "private": true,
   "devDependencies": {
@@ -12,6 +12,7 @@
     "dotenv-cli": "^10.0.0"
   },
   "dependencies": {
+    "canvas": "^3.2.0",
     "jimp": "^1.6.0"
   }
 }
