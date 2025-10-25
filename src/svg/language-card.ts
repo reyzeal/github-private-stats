@@ -54,7 +54,6 @@ export function languageCard(rank: Record<string, number>, by="", other_threshol
         .title { font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #fff; font-size: 14px; font-weight: bold; }
         .lang {font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #fff; font-size: 12px;}
         .percent {font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #bdbdbd; font-size: 10px;}
-        /*.title { font-size: 16px; font-weight: bold; fill: #6366f1; } !* indigo-500 *!*/
     </style>
     <rect width="100%" height="100%" fill="#0D0D0D"/>
     <text x="40" y="42" fill="#fff" class="title">Language${by?` (${by})`:""}</text>

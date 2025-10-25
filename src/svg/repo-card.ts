@@ -23,7 +23,7 @@ export const RepoCard = (repos: Record<string, any>[]) => {
     <style>
       text { font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #fff; font-size: 13px; }
       .center {font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #fff; font-size: 20px; }
-      .title { font-size: 16px; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-weight: bold; fill: #6366f1; } /* indigo-500 */
+      .title { font-size: 16px; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-weight: bold; fill: #6366f1; }
       .sub {font-size: 11px; font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #aaaaaa}
     </style>
     <rect width="100%" height="100%" fill="#0D0D0D"/>

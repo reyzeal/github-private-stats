@@ -24,7 +24,7 @@ export const AvatarCard = async (username: string, title: string, data: Array<[s
   <svg xmlns="http://www.w3.org/2000/svg" width="400" height="${80 + sorted.length * 20 + 20}">
     <style>
       text { font-family: 'JetBrains Mono', 'Fira Code', monospace; fill: #fff; font-size: 13px; }
-      .title { font-size: 16px; font-weight: bold; fill: #6366f1; } /* indigo-500 */
+      .title { font-size: 16px; font-weight: bold; fill: #6366f1; }
     </style>
     <rect width="100%" height="100%" fill="#1e1e2f"/>
     
