@@ -30,7 +30,11 @@ GITHUB_USERNAME=reyzeal
 Output files will be generated inside the `results` folder.
 ## 🔧 Features
 
+### 📁 Total Repository
+![Total Repository](./images/repo_total.svg)
 ### 🧮 Rank Top Languages by Size
+![Top Language by Size](./images/language.svg)
 ![Rank Top Languages by Size](./images/rank_size.svg)
-### 📊 Rank Top Languages by Presence
-![Rank Top Languages by Size](./images/rank_presence.svg)
+### 📊 Rank Top Languages by Repo Cunt
+![Top Language by Repo](./images/language_repo.svg)
+![Rank Top Languages by Repo](./images/rank_presence.svg)
